@@ -1,0 +1,464 @@
+[
+  {
+    "timestamp": 1774406017.1904197,
+    "datetime": "2026-03-25 08:03:37",
+    "username": "admin",
+    "action": "LOGIN",
+    "detail": "Authentication successful"
+  },
+  {
+    "timestamp": 1774406040.0880592,
+    "datetime": "2026-03-25 08:04:00",
+    "username": "admin",
+    "action": "LOGOUT",
+    "detail": "User logged out"
+  },
+  {
+    "timestamp": 1774406109.1474354,
+    "datetime": "2026-03-25 08:05:09",
+    "username": "adminnk",
+    "action": "SIGNUP",
+    "detail": "New account created \u2014 role: manager"
+  },
+  {
+    "timestamp": 1774406123.4828284,
+    "datetime": "2026-03-25 08:05:23",
+    "username": "adminNK",
+    "action": "LOGIN",
+    "detail": "Authentication successful"
+  },
+  {
+    "timestamp": 1774406151.5819566,
+    "datetime": "2026-03-25 08:05:51",
+    "username": "adminnk",
+    "action": "AUDIT",
+    "detail": "Navigated to Audit Trail"
+  },
+  {
+    "timestamp": 1774406176.802619,
+    "datetime": "2026-03-25 08:06:16",
+    "username": "adminnk",
+    "action": "LOGOUT",
+    "detail": "User logged out"
+  },
+  {
+    "timestamp": 1774406527.5887291,
+    "datetime": "2026-03-25 08:12:07",
+    "username": "admin",
+    "action": "LOGIN",
+    "detail": "Authentication successful"
+  },
+  {
+    "timestamp": 1774406626.7667184,
+    "datetime": "2026-03-25 08:13:46",
+    "username": "admin",
+    "action": "SEARCH",
+    "detail": "Navigated to Search Templates"
+  },
+  {
+    "timestamp": 1774406696.2307067,
+    "datetime": "2026-03-25 08:14:56",
+    "username": "admin",
+    "action": "BULK",
+    "detail": "Navigated to Bulk Generation"
+  },
+  {
+    "timestamp": 1774406741.626532,
+    "datetime": "2026-03-25 08:15:41",
+    "username": "admin",
+    "action": "AUDIT",
+    "detail": "Navigated to Audit Trail"
+  },
+  {
+    "timestamp": 1774406749.731392,
+    "datetime": "2026-03-25 08:15:49",
+    "username": "admin",
+    "action": "ADMIN",
+    "detail": "Navigated to Admin Panel"
+  },
+  {
+    "timestamp": 1774409345.6570766,
+    "datetime": "2026-03-25 08:59:05",
+    "username": "admin",
+    "action": "LOGIN",
+    "detail": "Authentication successful"
+  },
+  {
+    "timestamp": 1774409355.5222409,
+    "datetime": "2026-03-25 08:59:15",
+    "username": "admin",
+    "action": "VERSION",
+    "detail": "Navigated to Version Control"
+  },
+  {
+    "timestamp": 1774409394.9763484,
+    "datetime": "2026-03-25 08:59:54",
+    "username": "admin",
+    "action": "RISK",
+    "detail": "Navigated to Risk Heatmap"
+  },
+  {
+    "timestamp": 1774409742.283531,
+    "datetime": "2026-03-25 09:05:42",
+    "username": "admin",
+    "action": "SIDE-BY-SIDE",
+    "detail": "Navigated to Side-by-Side Viewer"
+  },
+  {
+    "timestamp": 1774409760.3592138,
+    "datetime": "2026-03-25 09:06:00",
+    "username": "admin",
+    "action": "DIFF",
+    "detail": "Side-by-side: CDS_BNPParibas_US_v1.docx vs CDS_BNPParibas_US_v1.docx"
+  },
+  {
+    "timestamp": 1774409772.4796221,
+    "datetime": "2026-03-25 09:06:12",
+    "username": "admin",
+    "action": "DIFF",
+    "detail": "Side-by-side: CDS_BNPParibas_US_v1.docx vs EquitySwap_DeutscheBank_US_v1.docx"
+  },
+  {
+    "timestamp": 1774409803.7117038,
+    "datetime": "2026-03-25 09:06:43",
+    "username": "admin",
+    "action": "GENERATE",
+    "detail": "Navigated to Generate Template"
+  },
+  {
+    "timestamp": 1774452897.2109818,
+    "datetime": "2026-03-25 21:04:57",
+    "username": "admin",
+    "action": "LOGIN",
+    "detail": "Authentication successful"
+  },
+  {
+    "timestamp": 1774452904.5174813,
+    "datetime": "2026-03-25 21:05:04",
+    "username": "admin",
+    "action": "AUDIT",
+    "detail": "Navigated to Audit Trail"
+  },
+  {
+    "timestamp": 1774457227.5347304,
+    "datetime": "2026-03-25 22:17:07",
+    "username": "admin",
+    "action": "LOGIN",
+    "detail": "Authentication successful"
+  },
+  {
+    "timestamp": 1774457237.9384828,
+    "datetime": "2026-03-25 22:17:17",
+    "username": "admin",
+    "action": "EMAIL",
+    "detail": "Navigated to Email Notification"
+  },
+  {
+    "timestamp": 1774457296.4056988,
+    "datetime": "2026-03-25 22:18:16",
+    "username": "admin",
+    "action": "ADMIN",
+    "detail": "SMTP config updated"
+  },
+  {
+    "timestamp": 1774457366.6534905,
+    "datetime": "2026-03-25 22:19:26",
+    "username": "admin",
+    "action": "ADMIN",
+    "detail": "SMTP config updated"
+  },
+  {
+    "timestamp": 1774457390.4244092,
+    "datetime": "2026-03-25 22:19:50",
+    "username": "admin",
+    "action": "BULK",
+    "detail": "Navigated to Bulk Generation"
+  },
+  {
+    "timestamp": 1774516291.5816035,
+    "datetime": "2026-03-26 14:41:31",
+    "username": "admin",
+    "action": "LOGIN",
+    "detail": "Authentication successful"
+  },
+  {
+    "timestamp": 1774516329.4381883,
+    "datetime": "2026-03-26 14:42:09",
+    "username": "admin",
+    "action": "SEARCH",
+    "detail": "Navigated to Search Templates"
+  },
+  {
+    "timestamp": 1774516332.2479475,
+    "datetime": "2026-03-26 14:42:12",
+    "username": "admin",
+    "action": "TEMPLATE",
+    "detail": "Navigated to Template Browser"
+  },
+  {
+    "timestamp": 1774517759.8337495,
+    "datetime": "2026-03-26 15:05:59",
+    "username": "admin",
+    "action": "LOGIN",
+    "detail": "Authentication successful"
+  },
+  {
+    "timestamp": 1774517830.6568975,
+    "datetime": "2026-03-26 15:07:10",
+    "username": "admin",
+    "action": "LOGOUT",
+    "detail": "User logged out"
+  },
+  {
+    "timestamp": 1774517922.9286277,
+    "datetime": "2026-03-26 15:08:42",
+    "username": "nk069",
+    "action": "SIGNUP",
+    "detail": "New account created \u2014 role: user"
+  },
+  {
+    "timestamp": 1774517945.9064538,
+    "datetime": "2026-03-26 15:09:05",
+    "username": "Nk069",
+    "action": "LOGIN",
+    "detail": "Authentication successful"
+  },
+  {
+    "timestamp": 1774517998.8371096,
+    "datetime": "2026-03-26 15:09:58",
+    "username": "admin",
+    "action": "LOGIN",
+    "detail": "Authentication successful"
+  },
+  {
+    "timestamp": 1774518009.3161736,
+    "datetime": "2026-03-26 15:10:09",
+    "username": "admin",
+    "action": "EMAIL",
+    "detail": "Navigated to Email Notification"
+  },
+  {
+    "timestamp": 1774541104.034726,
+    "datetime": "2026-03-26 21:35:04",
+    "username": "admin",
+    "action": "LOGIN",
+    "detail": "Authentication successful"
+  },
+  {
+    "timestamp": 1774541138.0426116,
+    "datetime": "2026-03-26 21:35:38",
+    "username": "admin",
+    "action": "LOGOUT",
+    "detail": "User logged out"
+  },
+  {
+    "timestamp": 1774664259.2334712,
+    "datetime": "2026-03-28 07:47:39",
+    "username": "admin",
+    "action": "LOGIN",
+    "detail": "Authentication successful"
+  },
+  {
+    "timestamp": 1774664309.3893094,
+    "datetime": "2026-03-28 07:48:29",
+    "username": "admin",
+    "action": "SMART",
+    "detail": "Navigated to Smart Recommender"
+  },
+  {
+    "timestamp": 1774664312.6812735,
+    "datetime": "2026-03-28 07:48:32",
+    "username": "admin",
+    "action": "SIDE-BY-SIDE",
+    "detail": "Navigated to Side-by-Side Viewer"
+  },
+  {
+    "timestamp": 1774664342.0317118,
+    "datetime": "2026-03-28 07:49:02",
+    "username": "admin",
+    "action": "ADMIN",
+    "detail": "Navigated to Admin Panel"
+  },
+  {
+    "timestamp": 1774664353.5328524,
+    "datetime": "2026-03-28 07:49:13",
+    "username": "admin",
+    "action": "VERSION",
+    "detail": "Navigated to Version Control"
+  },
+  {
+    "timestamp": 1774664382.2118034,
+    "datetime": "2026-03-28 07:49:42",
+    "username": "admin",
+    "action": "DIFF",
+    "detail": "Version compare: v1.0 \u2014 IRS_GoldmanSachs_USD_v1.docx \u2192 v2.0 \u2014 IRS_GoldmanSachs_USD_v2.docx"
+  },
+  {
+    "timestamp": 1774664400.1561792,
+    "datetime": "2026-03-28 07:50:00",
+    "username": "admin",
+    "action": "RISK",
+    "detail": "Navigated to Risk Heatmap"
+  },
+  {
+    "timestamp": 1774664422.5377555,
+    "datetime": "2026-03-28 07:50:22",
+    "username": "admin",
+    "action": "SEARCH",
+    "detail": "Navigated to Search Templates"
+  },
+  {
+    "timestamp": 1774664471.8911104,
+    "datetime": "2026-03-28 07:51:11",
+    "username": "admin",
+    "action": "RISK",
+    "detail": "Navigated to Risk Heatmap"
+  },
+  {
+    "timestamp": 1774664477.0297549,
+    "datetime": "2026-03-28 07:51:17",
+    "username": "admin",
+    "action": "CLAUSE",
+    "detail": "Navigated to Clause Library"
+  },
+  {
+    "timestamp": 1774664501.001063,
+    "datetime": "2026-03-28 07:51:41",
+    "username": "admin",
+    "action": "VERSION",
+    "detail": "Navigated to Version Control"
+  },
+  {
+    "timestamp": 1774664537.0074377,
+    "datetime": "2026-03-28 07:52:17",
+    "username": "admin",
+    "action": "UPLOAD",
+    "detail": "Navigated to Upload Template"
+  },
+  {
+    "timestamp": 1774715303.1986167,
+    "datetime": "2026-03-28 21:58:23",
+    "username": "admin",
+    "action": "LOGIN",
+    "detail": "Authentication successful"
+  },
+  {
+    "timestamp": 1774715346.9900746,
+    "datetime": "2026-03-28 21:59:06",
+    "username": "admin",
+    "action": "CLAUSE",
+    "detail": "Navigated to Clause Library"
+  },
+  {
+    "timestamp": 1774715369.646577,
+    "datetime": "2026-03-28 21:59:29",
+    "username": "admin",
+    "action": "SMART",
+    "detail": "Navigated to Smart Recommender"
+  },
+  {
+    "timestamp": 1774715654.132334,
+    "datetime": "2026-03-28 22:04:14",
+    "username": "admin",
+    "action": "ADMIN",
+    "detail": "Navigated to Admin Panel"
+  },
+  {
+    "timestamp": 1774715666.639651,
+    "datetime": "2026-03-28 22:04:26",
+    "username": "admin",
+    "action": "AUDIT",
+    "detail": "Navigated to Audit Trail"
+  },
+  {
+    "timestamp": 1774715707.3708823,
+    "datetime": "2026-03-28 22:05:07",
+    "username": "admin",
+    "action": "UPLOAD",
+    "detail": "Navigated to Upload Template"
+  },
+  {
+    "timestamp": 1774715748.4621146,
+    "datetime": "2026-03-28 22:05:48",
+    "username": "admin",
+    "action": "EMAIL",
+    "detail": "Navigated to Email Notification"
+  },
+  {
+    "timestamp": 1774939744.1805906,
+    "datetime": "2026-03-31 12:19:04",
+    "username": "admin",
+    "action": "LOGIN",
+    "detail": "Authentication successful"
+  },
+  {
+    "timestamp": 1774940212.8932343,
+    "datetime": "2026-03-31 12:26:52",
+    "username": "admin",
+    "action": "LOGIN",
+    "detail": "Authentication successful"
+  },
+  {
+    "timestamp": 1774940220.7900047,
+    "datetime": "2026-03-31 12:27:00",
+    "username": "admin",
+    "action": "SEARCH",
+    "detail": "Navigated to Search Templates"
+  },
+  {
+    "timestamp": 1774940222.4578414,
+    "datetime": "2026-03-31 12:27:02",
+    "username": "admin",
+    "action": "SEARCH",
+    "detail": "Navigated to Search Templates"
+  },
+  {
+    "timestamp": 1774940501.1652963,
+    "datetime": "2026-03-31 12:31:41",
+    "username": "admin",
+    "action": "LOGIN",
+    "detail": "Authentication successful"
+  },
+  {
+    "timestamp": 1774940542.7324843,
+    "datetime": "2026-03-31 12:32:22",
+    "username": "admin",
+    "action": "LOGIN",
+    "detail": "Authentication successful"
+  },
+  {
+    "timestamp": 1774942241.3022602,
+    "datetime": "2026-03-31 13:00:41",
+    "username": "admin",
+    "action": "LOGIN",
+    "detail": "Authentication successful"
+  },
+  {
+    "timestamp": 1774942256.9130614,
+    "datetime": "2026-03-31 13:00:56",
+    "username": "admin",
+    "action": "SEARCH",
+    "detail": "Navigated to Search Templates"
+  },
+  {
+    "timestamp": 1774942275.3479195,
+    "datetime": "2026-03-31 13:01:15",
+    "username": "admin",
+    "action": "SEARCH",
+    "detail": "Navigated to Search Templates"
+  },
+  {
+    "timestamp": 1774942276.5453763,
+    "datetime": "2026-03-31 13:01:16",
+    "username": "admin",
+    "action": "TEMPLATE",
+    "detail": "Navigated to Template Browser"
+  },
+  {
+    "timestamp": 1774942467.1664734,
+    "datetime": "2026-03-31 13:04:27",
+    "username": "admin",
+    "action": "DIFF",
+    "detail": "Navigated to Diff Highlighter"
+  }
+]

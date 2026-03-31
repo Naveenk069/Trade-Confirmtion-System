@@ -1,0 +1,25 @@
+# Core ML / Embeddings
+sentence-transformers>=2.2.2      # Primary embedding model
+torch>=2.0.0                      # Required by sentence-transformers
+
+# Vector Database
+chromadb>=0.4.0                   # Persistent vector store
+
+# Document Parsing
+python-docx>=1.1.0                # .docx parsing
+pdfplumber>=0.10.0                # PDF parsing
+
+# API (Phase 2)
+fastapi>=0.110.0
+uvicorn[standard]>=0.29.0
+pydantic>=2.0.0
+
+# Utilities
+numpy>=1.24.0
+rich>=13.0.0                      # Pretty terminal output
+python-dotenv>=1.0.0
+tqdm>=4.66.0
+
+# Testing
+pytest>=8.0.0
+pytest-asyncio>=0.23.0

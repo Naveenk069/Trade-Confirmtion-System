@@ -1,0 +1,41 @@
+{
+  "governing_law": {
+    "US": "New York",
+    "UK": "English",
+    "EU": "English",
+    "APAC": "English"
+  },
+  "isda_version": {
+    "Interest Rate Swap": "2002 ISDA Master Agreement",
+    "FX Forward": "2002 ISDA Master Agreement",
+    "Credit Default Swap": "2003 ISDA Credit Derivatives Definitions",
+    "Equity Swap": "2002 ISDA Master Agreement + 2011 Equity Derivatives Definitions",
+    "Total Return Swap": "2002 ISDA Master Agreement"
+  },
+  "day_count": {
+    "USD": "Actual/360",
+    "EUR": "Actual/360",
+    "GBP": "Actual/365",
+    "JPY": "Actual/360",
+    "CHF": "Actual/360"
+  },
+  "floating_rate_benchmark": {
+    "USD": "SOFR",
+    "GBP": "SONIA",
+    "EUR": "EURIBOR",
+    "JPY": "TONA",
+    "CHF": "SARON"
+  },
+  "clearing_venue": {
+    "Interest Rate Swap": "LCH SwapClear",
+    "Credit Default Swap": "ICE Clear Credit",
+    "Equity Swap": "Not cleared (bilateral)",
+    "FX Forward": "Not cleared (bilateral)"
+  },
+  "payment_frequency": {
+    "Interest Rate Swap": "Quarterly",
+    "FX Forward": "At maturity",
+    "Credit Default Swap": "Quarterly",
+    "Equity Swap": "Quarterly"
+  }
+}

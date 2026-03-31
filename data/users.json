@@ -1,0 +1,29 @@
+{
+  "admin": {
+    "username": "admin",
+    "password_hash": "8gD9E1OPu9405L9A4Smexw==$Tizgc0nfWC1HMjtYJe3na8OGRMzqCGcY+uf6VEUK7mY=",
+    "role": "admin",
+    "full_name": "System Administrator",
+    "email": "admin@tradeconfirm.ai",
+    "created_at": 1774406016.910698,
+    "last_login": 1774942241.279598
+  },
+  "adminnk": {
+    "username": "adminnk",
+    "password_hash": "R06tf27FYTqmufWzHtehiQ==$dS6ynCsMqbErkZkMvITX5Z8F6bofdIkCQ1UJRKXICgw=",
+    "role": "manager",
+    "full_name": "Naveen",
+    "email": "mnaveenk2004@gmail.com",
+    "created_at": 1774406109.1294346,
+    "last_login": 1774406123.4635282
+  },
+  "nk069": {
+    "username": "nk069",
+    "password_hash": "a7Tm9T+qUxqg9fG3Wx6KJw==$/U9hmqrxJfNzjoLS6OkwrCjhVhhI/uY+sPIa3IUCojE=",
+    "role": "user",
+    "full_name": "NaveenKumar M",
+    "email": "927622bcs069@mkce.ac.in",
+    "created_at": 1774517922.9160101,
+    "last_login": 1774517945.8876572
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "smtp_host": "smtp.gmail.com",
+  "smtp_port": 465,
+  "sender_email": "",
+  "smtp_password": "admin123",
+  "sender_name": "TradeConfirmation AI"
+}
