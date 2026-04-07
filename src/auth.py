@@ -28,10 +28,13 @@ USERS_FILE    = Path(__file__).parent.parent / "data" / "users.json"
 AUDIT_FILE    = Path(__file__).parent.parent / "data" / "audit_log.json"
 
 ROLE_PERMISSIONS = {
-    "user":    ["browser"],
-    "analyst": ["search", "browser", "generate"],
-    "manager": ["search", "browser", "generate", "diff", "download"],
-    "admin":   ["search", "browser", "generate", "diff", "download", "upload", "admin"],
+    "user":    ["browser", "search", "diff", "generate"],                             # browse + search + diff + generate
+    "analyst": ["search", "browser","diff", "generate", "recommender"],                      # search + generate
+    "manager": ["search", "browser", "generate", "recommender", "diff",
+                "sidebyside", "heatmap", "versions", "download"],                     # + diff tools
+    "admin":   ["search", "browser", "generate", "recommender", "diff",
+                "sidebyside", "heatmap", "versions", "download",
+                "upload", "clauses", "audit", "admin"],                               # full access
 }
 
 # ── User Store ────────────────────────────────────────────────────────────

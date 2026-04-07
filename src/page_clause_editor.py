@@ -108,23 +108,12 @@ def page_clause_editor():
 
     # ── Stats ──────────────────────────────────────────────────────────────
     total_entries = sum(len(v) for v in lib.values())
-    st.markdown(f"""<div class="metric-row">
-        <div class="metric-card mc-cyan">
-            <div class="metric-icon">📚</div>
-            <div class="metric-value">{len(lib)}</div>
-            <div class="metric-label">Clause Categories</div>
-        </div>
-        <div class="metric-card mc-green">
-            <div class="metric-icon">📋</div>
-            <div class="metric-value">{total_entries}</div>
-            <div class="metric-label">Total Mappings</div>
-        </div>
-        <div class="metric-card mc-amber">
-            <div class="metric-icon">✏️</div>
-            <div class="metric-value">{"Yes" if is_admin else "No"}</div>
-            <div class="metric-label">Edit Access</div>
-        </div>
-    </div>""", unsafe_allow_html=True)
+    _mr = '<div style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:28px;">'
+    _mr += f'<div style="flex:1;min-width:130px;padding:18px 16px;border-radius:14px;text-align:center;background:rgba(0,212,255,0.12);border:1px solid rgba(0,212,255,0.3);"><div style="font-size:22px;margin-bottom:6px;">📚</div><div style="font-family:Inter,sans-serif;font-size:28px;font-weight:900;color:#00D4FF;line-height:1;">{len(lib)}</div><div style="font-size:11px;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:1px;margin-top:4px;">Clause Categories</div></div>'
+    _mr += f'<div style="flex:1;min-width:130px;padding:18px 16px;border-radius:14px;text-align:center;background:rgba(0,255,136,0.12);border:1px solid rgba(0,255,136,0.3);"><div style="font-size:22px;margin-bottom:6px;">📋</div><div style="font-family:Inter,sans-serif;font-size:28px;font-weight:900;color:#00FF88;line-height:1;">{total_entries}</div><div style="font-size:11px;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:1px;margin-top:4px;">Total Mappings</div></div>'
+    _mr += f'<div style="flex:1;min-width:130px;padding:18px 16px;border-radius:14px;text-align:center;background:rgba(245,158,11,0.12);border:1px solid rgba(245,158,11,0.3);"><div style="font-size:22px;margin-bottom:6px;">✏️</div><div style="font-family:Inter,sans-serif;font-size:28px;font-weight:900;color:#F59E0B;line-height:1;">{"Yes" if is_admin else "No"}</div><div style="font-size:11px;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:1px;margin-top:4px;">Edit Access</div></div>'
+    _mr += '</div>'
+    st.markdown(_mr, unsafe_allow_html=True)
 
     if not is_admin:
         st.markdown(

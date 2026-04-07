@@ -617,26 +617,32 @@ def render_sidebar():
     </div>
 </div>""", unsafe_allow_html=True)
 
-        # Navigation — role-gated
+        # Navigation — strictly role-gated per permission
         if "page" not in st.session_state:
             st.session_state.page = "search"
 
-        # All roles
         nav_items = [
-            ("🔍", "Search Templates",    "search",      True),
-            ("📋", "Template Browser",    "browser",     True),
-            ("💡", "Smart Recommender",   "recommender", True),
-            ("⚡", "Diff Highlighter",    "diff",        can_access(role, "diff")),
-            ("🪟", "Side-by-Side Viewer", "sidebyside",  can_access(role, "diff")),
-            ("🌡", "Risk Heatmap",        "heatmap",     can_access(role, "diff")),
-            ("🚀", "Generate Template",   "generate",    can_access(role, "generate")),
-            ("📦", "Bulk Generation",     "bulk",        can_access(role, "generate")),
-            ("📧", "Email Notification",  "email",       can_access(role, "generate")),
-            ("🗂", "Version Control",     "versions",    True),
-            ("📚", "Clause Library",      "clauses",     True),
-            ("⬆️", "Upload Template",     "upload",      can_access(role, "upload")),
-            ("📊", "Audit Trail",         "audit",       True),
-            ("⚙️", "Admin Panel",         "admin",       can_access(role, "admin")),
+            # ── User + above (4 core pages) ──────────────────────
+            ("📋", "Template Browser",    "browser",    True),
+            ("🔍", "Search Templates",    "search",     can_access(role, "search")),
+            ("⚡", "Diff Highlighter",    "diff",       can_access(role, "diff")),
+            ("🚀", "Generate Template",   "generate",   can_access(role, "generate")),
+
+            # ── Analyst + above ──────────────────────────────────
+            ("💡", "Smart Recommender",   "recommender",can_access(role, "recommender")),
+            ("📦", "Bulk Generation",     "bulk",       can_access(role, "generate") and role != "user"),
+            ("📧", "Email Notification",  "email",      can_access(role, "generate") and role != "user"),
+
+            # ── Manager + above ──────────────────────────────────
+            ("🪟", "Side-by-Side Viewer", "sidebyside", can_access(role, "sidebyside")),
+            ("🌡", "Risk Heatmap",        "heatmap",    can_access(role, "heatmap")),
+            ("🗂", "Version Control",     "versions",   can_access(role, "versions")),
+
+            # ── Admin only ───────────────────────────────────────
+            ("📚", "Clause Library",      "clauses",    can_access(role, "clauses")),
+            ("⬆️", "Upload Template",     "upload",     can_access(role, "upload")),
+            ("📊", "Audit Trail",         "audit",      can_access(role, "audit")),
+            ("⚙️", "Admin Panel",         "admin",      can_access(role, "admin")),
         ]
 
         for icon, label, key, allowed in nav_items:
@@ -845,11 +851,11 @@ def page_browser():
     draft_count  = sum(1 for t in templates if t.get("status") == "draft")
     trade_count  = len(set(t.get("trade_type") for t in templates))
 
-    _mc = '<div class="metric-row">'
-    _mc += f'<div class="metric-card mc-cyan"><div class="metric-icon">📋</div><div class="metric-value">{total}</div><div class="metric-label">Total Templates</div></div>'
-    _mc += f'<div class="metric-card mc-green"><div class="metric-icon">✅</div><div class="metric-value">{active_count}</div><div class="metric-label">Active</div></div>'
-    _mc += f'<div class="metric-card mc-amber"><div class="metric-icon">📝</div><div class="metric-value">{draft_count}</div><div class="metric-label">Draft</div></div>'
-    _mc += f'<div class="metric-card mc-purple"><div class="metric-icon">⚡</div><div class="metric-value">{trade_count}</div><div class="metric-label">Trade Types</div></div>'
+    _mc = '<div style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:28px;">'
+    _mc += f'<div style="flex:1;min-width:130px;padding:18px 16px;border-radius:14px;text-align:center;background:rgba(0,212,255,0.12);border:1px solid rgba(0,212,255,0.3);"><div style="font-size:22px;margin-bottom:6px;">📋</div><div style="font-family:Inter,sans-serif;font-size:28px;font-weight:900;color:#00D4FF;line-height:1;">{total}</div><div style="font-size:11px;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:1px;margin-top:4px;">Total Templates</div></div>'
+    _mc += f'<div style="flex:1;min-width:130px;padding:18px 16px;border-radius:14px;text-align:center;background:rgba(0,255,136,0.12);border:1px solid rgba(0,255,136,0.3);"><div style="font-size:22px;margin-bottom:6px;">✅</div><div style="font-family:Inter,sans-serif;font-size:28px;font-weight:900;color:#00FF88;line-height:1;">{active_count}</div><div style="font-size:11px;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:1px;margin-top:4px;">Active</div></div>'
+    _mc += f'<div style="flex:1;min-width:130px;padding:18px 16px;border-radius:14px;text-align:center;background:rgba(245,158,11,0.12);border:1px solid rgba(245,158,11,0.3);"><div style="font-size:22px;margin-bottom:6px;">📝</div><div style="font-family:Inter,sans-serif;font-size:28px;font-weight:900;color:#F59E0B;line-height:1;">{draft_count}</div><div style="font-size:11px;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:1px;margin-top:4px;">Draft</div></div>'
+    _mc += f'<div style="flex:1;min-width:130px;padding:18px 16px;border-radius:14px;text-align:center;background:rgba(168,85,247,0.12);border:1px solid rgba(168,85,247,0.3);"><div style="font-size:22px;margin-bottom:6px;">⚡</div><div style="font-family:Inter,sans-serif;font-size:28px;font-weight:900;color:#A855F7;line-height:1;">{trade_count}</div><div style="font-size:11px;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:1px;margin-top:4px;">Trade Types</div></div>'
     _mc += '</div>'
     st.markdown(_mc, unsafe_allow_html=True)
 
@@ -1192,35 +1198,78 @@ def main():
     # ── Authenticated — render app ────────────────────────────────────────
     page = render_sidebar()
 
+    # ── Guard: redirect if user navigated to a page they can't access ────
+    _page_permission_map = {
+        "search":     "search",
+        "recommender":"recommender",
+        "generate":   "generate",
+        "bulk":       "generate",
+        "email":      "generate",
+        "diff":       "diff",
+        "sidebyside": "sidebyside",
+        "heatmap":    "heatmap",
+        "versions":   "versions",
+        "clauses":    "clauses",
+        "upload":     "upload",
+        "audit":      "audit",
+        "admin":      "admin",
+        "browser":    None,   # always allowed
+    }
+    #role = st.session_state.get("role", None)
+    # bulk and email not available to user role even though generate is
+    #if page in ("bulk", "email") and role == "user":
+     #   st.session_state.page = "generate"
+      #  st.rerun()
+    required_perm = _page_permission_map.get(page)
+    role = st.session_state.get("role", None)
+    if required_perm and not can_access(role, required_perm):
+        st.session_state.page = "search"
+        st.warning("You don't have access to that page.")
+        st.rerun()
+
     with st.container():
         if page == "search":
             page_search()
+            return
         elif page == "browser":
             page_browser()
+            return
         elif page == "upload":
             page_upload()
+            return
         elif page == "admin":
             page_admin()
+            return
         elif page == "diff":
             page_diff()
+            return
         elif page == "generate":
             page_generate()
+            return
         elif page == "bulk":
             page_bulk()
+            return
         elif page == "audit":
             page_audit()
+            return
         elif page == "sidebyside":
             page_sidebyside()
+            return
         elif page == "heatmap":
             page_heatmap()
+            return
         elif page == "versions":
             page_versions()
+            return
         elif page == "recommender":
             page_recommender()
+            return
         elif page == "clauses":
             page_clause_editor()
+            return
         elif page == "email":
             page_email()
+            return
 
 
 if __name__ == "__main__":

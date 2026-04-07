@@ -75,33 +75,14 @@ def page_audit():
     gens     = sum(1 for l in logs if l["action"] == "GENERATE")
     diffs    = sum(1 for l in logs if l["action"] == "DIFF")
 
-    st.markdown(f"""<div class="metric-row">
-        <div class="metric-card mc-cyan">
-            <div class="metric-icon">📋</div>
-            <div class="metric-value">{total}</div>
-            <div class="metric-label">Total Events</div>
-        </div>
-        <div class="metric-card mc-green">
-            <div class="metric-icon">🔐</div>
-            <div class="metric-value">{logins}</div>
-            <div class="metric-label">Logins</div>
-        </div>
-        <div class="metric-card mc-amber">
-            <div class="metric-icon">🔍</div>
-            <div class="metric-value">{searches}</div>
-            <div class="metric-label">Searches</div>
-        </div>
-        <div class="metric-card mc-purple">
-            <div class="metric-icon">🚀</div>
-            <div class="metric-value">{gens}</div>
-            <div class="metric-label">Generations</div>
-        </div>
-        <div class="metric-card mc-cyan">
-            <div class="metric-icon">⚡</div>
-            <div class="metric-value">{diffs}</div>
-            <div class="metric-label">Diff Runs</div>
-        </div>
-    </div>""", unsafe_allow_html=True)
+    _mr = '<div style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:28px;">'
+    _mr += f'<div style="flex:1;min-width:130px;padding:18px 16px;border-radius:14px;text-align:center;background:rgba(0,212,255,0.12);border:1px solid rgba(0,212,255,0.3);"><div style="font-size:22px;margin-bottom:6px;">📋</div><div style="font-family:Inter,sans-serif;font-size:28px;font-weight:900;color:#00D4FF;line-height:1;">{total}</div><div style="font-size:11px;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:1px;margin-top:4px;">Total Events</div></div>'
+    _mr += f'<div style="flex:1;min-width:130px;padding:18px 16px;border-radius:14px;text-align:center;background:rgba(0,255,136,0.12);border:1px solid rgba(0,255,136,0.3);"><div style="font-size:22px;margin-bottom:6px;">🔐</div><div style="font-family:Inter,sans-serif;font-size:28px;font-weight:900;color:#00FF88;line-height:1;">{logins}</div><div style="font-size:11px;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:1px;margin-top:4px;">Logins</div></div>'
+    _mr += f'<div style="flex:1;min-width:130px;padding:18px 16px;border-radius:14px;text-align:center;background:rgba(245,158,11,0.12);border:1px solid rgba(245,158,11,0.3);"><div style="font-size:22px;margin-bottom:6px;">🔍</div><div style="font-family:Inter,sans-serif;font-size:28px;font-weight:900;color:#F59E0B;line-height:1;">{searches}</div><div style="font-size:11px;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:1px;margin-top:4px;">Searches</div></div>'
+    _mr += f'<div style="flex:1;min-width:130px;padding:18px 16px;border-radius:14px;text-align:center;background:rgba(168,85,247,0.12);border:1px solid rgba(168,85,247,0.3);"><div style="font-size:22px;margin-bottom:6px;">🚀</div><div style="font-family:Inter,sans-serif;font-size:28px;font-weight:900;color:#A855F7;line-height:1;">{gens}</div><div style="font-size:11px;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:1px;margin-top:4px;">Generations</div></div>'
+    _mr += f'<div style="flex:1;min-width:130px;padding:18px 16px;border-radius:14px;text-align:center;background:rgba(0,212,255,0.12);border:1px solid rgba(0,212,255,0.3);"><div style="font-size:22px;margin-bottom:6px;">⚡</div><div style="font-family:Inter,sans-serif;font-size:28px;font-weight:900;color:#00D4FF;line-height:1;">{diffs}</div><div style="font-size:11px;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:1px;margin-top:4px;">Diff Runs</div></div>'
+    _mr += '</div>'
+    st.markdown(_mr, unsafe_allow_html=True)
 
     # ── Filters ────────────────────────────────────────────────────────────
     col1, col2, col3 = st.columns([2, 2, 1])
@@ -178,9 +159,15 @@ def page_audit():
                 )
             with col3:
                 if u["username"] != "admin":
+                    roles = ["user","analyst", "manager", "admin"]
+                    current_role = u.get("role", "user")
+                    if current_role not in roles:
+                        current_role = "user"
+                    
                     new_role = st.selectbox(
-                        "Change role", ["analyst", "manager", "admin"],
-                        index=["analyst","manager","admin"].index(u["role"]),
+                        "Change role",
+                        roles,
+                        index=roles.index(current_role),
                         key=f"role_{u['username']}"
                     )
                     if new_role != u["role"]:

@@ -83,23 +83,12 @@ def page_versions():
 
     # ── Stats ──────────────────────────────────────────────────────────────
     multi_version = sum(1 for g in groups.values() if len(g) > 1)
-    st.markdown(f"""<div class="metric-row">
-        <div class="metric-card mc-cyan">
-            <div class="metric-icon">📁</div>
-            <div class="metric-value">{len(groups)}</div>
-            <div class="metric-label">Document Families</div>
-        </div>
-        <div class="metric-card mc-green">
-            <div class="metric-icon">📄</div>
-            <div class="metric-value">{len(templates)}</div>
-            <div class="metric-label">Total Versions</div>
-        </div>
-        <div class="metric-card mc-amber">
-            <div class="metric-icon">🔀</div>
-            <div class="metric-value">{multi_version}</div>
-            <div class="metric-label">Multi-Version Docs</div>
-        </div>
-    </div>""", unsafe_allow_html=True)
+    _mr = '<div style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:28px;">'
+    _mr += f'<div style="flex:1;min-width:130px;padding:18px 16px;border-radius:14px;text-align:center;background:rgba(0,212,255,0.12);border:1px solid rgba(0,212,255,0.3);"><div style="font-size:22px;margin-bottom:6px;">📁</div><div style="font-family:Inter,sans-serif;font-size:28px;font-weight:900;color:#00D4FF;line-height:1;">{len(groups)}</div><div style="font-size:11px;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:1px;margin-top:4px;">Document Families</div></div>'
+    _mr += f'<div style="flex:1;min-width:130px;padding:18px 16px;border-radius:14px;text-align:center;background:rgba(0,255,136,0.12);border:1px solid rgba(0,255,136,0.3);"><div style="font-size:22px;margin-bottom:6px;">📄</div><div style="font-family:Inter,sans-serif;font-size:28px;font-weight:900;color:#00FF88;line-height:1;">{len(templates)}</div><div style="font-size:11px;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:1px;margin-top:4px;">Total Versions</div></div>'
+    _mr += f'<div style="flex:1;min-width:130px;padding:18px 16px;border-radius:14px;text-align:center;background:rgba(245,158,11,0.12);border:1px solid rgba(245,158,11,0.3);"><div style="font-size:22px;margin-bottom:6px;">🔀</div><div style="font-family:Inter,sans-serif;font-size:28px;font-weight:900;color:#F59E0B;line-height:1;">{multi_version}</div><div style="font-size:11px;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:1px;margin-top:4px;">Multi-Version Docs</div></div>'
+    _mr += '</div>'
+    st.markdown(_mr, unsafe_allow_html=True)
 
     # ── Version groups ──────────────────────────────────────────────────────
     compare_result = None
